@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /*#clip-border{
+            background-clip: border-box;
+            background-color: black;
+            color: yellow;
+            border-color: yellow;
+            border: 2px solid;
+            margin: 40px auto;
+        }
+        #clip-padding{
+            background-clip: padding-box;
+            background-color: black;
+            color: yellow;
+            border-color: yellow;
+            border: 2px solid;
+            margin: 40px auto;
+        }
+        #clip-content{
+            background-clip: content-box;
+            background-color: black;
+            color: yellow;
+            border-color: yellow;
+            border: 2px solid;
+            margin: 40px auto;
+        }
+        #container{
+            background-color: blue;
+            width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }*/
+        /*ul{
+            list-style: none;
+            margin-left: -30px;
+        }
+        li{
+            background-image: url('구슬.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding-left: 50px;
+            line-height: 40px;
+            color: white;
+        }*/
+        /*body{
+            background-image: url('구슬.png');
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-attachment: fixed;
+           
+        }
+        div {
+            width: 30%;
+            border: 2px solid red
+        }
+        #bg1{
+            background-origin: padding-box;
+            padding: 50px 50px;
+            background: blue;
+            background: radial-gradient(circle at 20% 20%, white, blue);
+        }
+        #bg2{
+            background-origin: border-box;
+            padding: 50px 50px;
+            background: skyblue;
+            background: radial-gradient(yellow, white, orange);
+        }
+        #bg3{
+            background-origin: content-box;
+            padding: 50px 50px;
+            background: skyblue;
+            background: radial-gradient(yellow, white 10%, orange 60%);
+        }
+        #bg4{
+            background: red;
+            background: repeating-linear-gradient(yellow, red 20px);
+        }
+        #bg44{
+            background: #ccc;
+            background: repeating-radial-gradient(circle, white, #ccc 10%);
+        }
+        #bg5{
+            background: red;
+            background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);
+        }
+        #bg6{
+            background: #ccc;
+            background: repeating-radial-gradient(circle, white, white 10%, #ccc 10%, #ccc 20%);
+        }*/
+        /*section p{
+            color: blue;
+        }
+        section > p{
+            color: red;
+        }
+        h1 + p{
+            color: yellow;
+            background-color: blanchedalmond;
+        }
+        h1 ~ p{
+            color: brown;
+        }*/
+        /*a[href]{
+            background-color: yellow;
+            border: 1px solid #ccc;
+            font-weight: normal;
+            width: 70%;
+            height: 70%;
+        }
+        a[target = _blank]{
+            padding-right: 30px;
+            background: linear-gradient(white, pink);
+        }
+        [class ~= button]{
+            box-shadow: rgba(red, green, blue, alpha) 4px 4px;
+            border-radius: 5px;
+        }
+        a[title |= us]{
+            background: linear-gradient(white, yellow);
+        }
+        a[title ^= eng]{
+            background: linear-gradient(black, white);
+        }
+        a[title $= pan]{
+            background: linear-gradient(blue, black);
+        }
+        a[title *= rea]{
+            background: linear-gradient(yellow, red);
+        }*/
+        /*.navi ul li{
+            float: left;
+            width: 150px;
+            padding: 10px;
+        }
+        .navi a:link, .navi a:visited{
+            display: block;
+            font-size: 14px;
+            color: #000;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navi a:hover, .navi a:focus{
+            background-color: #222;
+            color: #fff;
+        }
+        .navi a:active{
+            background-color: #f00;
+        }
+        #intro:target{
+            background-color: #0069e0;
+            color: #fff;
+        }
+        #signup input:not([type=radio]){
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 5px;
+            width: 500px;
+        }
+        .contents :nth-child(3){
+            background-color: #ffff00;
+        }
+        .contents p:nth-of-type(3){
+            background-color: #00b900;
+        }
+        li.new::after{
+            content: "NEW!!";
+            font-size: x-small;
+            padding: 2px 4px;
+            margin: 0 10px;
+            border-radius: 2px;
+            background: #f00;
+            color: #fff;
+        }
+        .border{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 50px 50px;
+        }
+        .sizeup{
+            padding: 100px 100px;
+            background-color: yellow;
+        }
+        #movex{
+            transform: :translateX(50px);
+        }
+        #movey{
+            transform: :translateX(20px);
+        }
+        #movexy{
+            transform: :translate(50px, 20px);
+        }
+        #scalex{
+            transform: scaleX(2);
+        }
+        #scaley{
+            transform: scaleY(1.5);
+        }
+        #scale{
+            transform: scale(0.7);
+        }
+        #rotate1:hover{
+            transform: rotate(40deg);
+        }
+        #rotate2:hover{
+            transform: rotate(-40deg);
+        }
+        .rotatex:hover{
+            transform: rotateX(50deg);
+        }
+        #pers{
+            perspective: 300px;
+        }
+        .border > div{
+            background-color: black;
+            transition: all 3s;
+        }
+        #rotatex:hover{
+            transform: rotateX(55deg);
+        }
+        #rotatey:hover{
+            transform: rotateY(55deg);
+        }
+        #rotatez:hover{
+            transform: rotateZ(55deg);
+        }
+        #rotatexyz:hover{
+            transform: rotate3d(2.5, 1.2, -1.5, 55deg);
+        }*/
+        /*h1{
+            width: 500px;
+            height: 80px;
+            background-color: #222;
+            color: #fff;
+            font-weight: bold;
+            line-height: 80px;
+            text-align: center;
+            transform: skewX(15deg);
+        }*/
+        /*.big{
+            width: 1000px;
+            height: 800px;
+            margin: 20px auto;
+        }
+        .mid{
+            margin: 20px;
+            width: 800px;
+            height: 500px;
+        }
+        .mid > div{
+            border: 1px solid black;
+            float: left;
+            margin: 20px 50px;
+            height: 100px;
+        }
+        .bg1{
+            transform: translateX(10px);
+            background-color: yellow;
+            width: 50px;
+            height: 50px;
+        }
+        .bg2{
+            transform: translateX(10px);
+            background-color: yellow;
+            width: 50px;
+            height: 50px;
+        }
+        .bg3{
+            transform: scale(10,10);
+            width: 50px;
+            height: 50px;
+        }*/
+        /*.bbox{
+            display: flex;
+            width: 300px;
+            height: 200px;
+            background-color: red;
+            margin-top: 200px;
+            margin-left: 500px;
+            perspective: 200px;
+            
+        }
+        .box{
+            width: 100px;
+            height: 60px;
+            border: 1px solid black;
+            background-color: yellow;
+        }
+        .box:hover{
+            width: 200px;
+            height: 120px;
+            background-color: red;
+            border: 10px solid transparent;
+            animation: shape 1.5s infinite, rotate 1.5s infinite alternate;
+        }
+        .bbox1{
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background-color: red;
+            margin-left: 1000px;
+            perspective: 200px;
+            
+        }
+        .box1{
+            width: 200px;
+            height: 120px;
+            background-color: red;
+            animation: shape 1.5s infinite, rotate 1.5s infinite alternate;
+        }
+        @keyframes shape{
+            from{border: 10px solid transparent;
+                    background-color: red;
+            }
+            50%{
+                background-color: green;
+            }
+            to{border: 10px solid black;
+                border-radius: 50%;
+                background-color: blue;
+            }
+        }
+        @keyframes rotate{
+            from{transform: rotate(0deg);}
+            50%{transform: rotate(45deg);}
+            to{transform: rotate(90deg);}
+        }*/
+        .gratest{
+            width: 1920px;
+            height: 1000px;
+            margin: 0 auto;
+            background: red;
+            background: radial-gradient(circle, red, green, blue);
+            animation: bg 0.1s infinite;
+        }
+        @keyframes bg{
+            from{ background: radial-gradient(circle, red, green, blue); }
+            50%{ background: radial-gradient(circle, green, blue, red); }
+            to{ background: radial-gradient(circle, blue, red, green);}
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--<div id="container">
+        <div id="clip-border">
+            <h1>레드향</h1>
+            <p>껍질에 붉은 빛이 어쩌구</p>
+        </div>
+        <div id="clip-padding">
+            <h1>레드향</h1>
+            <p>껍질에 붉은 빛이 어쩌구</p>
+        </div>
+        <div id="clip-content">
+            레드향
+            <p>껍질에 붉은 빛이 어쩌구</p>
+        </div>
+    </div>-->
+
+    <!--<h1>이지스퍼블리싱</h1>
+    <ul>
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>동영상강의</li>
+    </ul>-->
+
+    <!--<div id="bg1">
+    <h3>바빠 시리즈</h3>
+    <p>바쁜 학생들을 위한 빠른 학습법</p>
+    <p>쉬운 내용은 압축하여 빠르게,</p>
+    </div>
+
+    <div id="bg2">
+        <h3>바빠 시리즈</h3>
+        <p>바쁜 학생들을 위한 빠른 학습법</p>
+        <p>쉬운 내용은 압축하여 빠르게,</p>
+    </div>
+
+    <div id="bg3">
+        <h3>바빠 시리즈</h3>
+        <p>바쁜 학생들을 위한 빠른 학습법</p>
+        <p>쉬운 내용은 압축하여 빠르게,</p>
+    </div>
+
+    <div id="bg4">
+        <h3>바빠 시리즈</h3>
+        <p>바쁜 학생들을 위한 빠른 학습법</p>
+        <p>쉬운 내용은 압축하여 빠르게,</p>
+    </div>
+
+    <div id="bg44">
+        <h3>바빠 시리즈</h3>
+        <p>바쁜 학생들을 위한 빠른 학습법</p>
+        <p>쉬운 내용은 압축하여 빠르게,</p>
+    </div>
+
+    <div id="bg5">
+        <h3>바빠 시리즈</h3>
+        <p>바쁜 학생들을 위한 빠른 학습법</p>
+        <p>쉬운 내용은 압축하여 빠르게,</p>
+    </div>
+
+    <div id="bg6">
+        <h3>바빠 시리즈</h3>
+        <p>바쁜 학생들을 위한 빠른 학습법</p>
+        <p>쉬운 내용은 압축하여 빠르게,</p>
+    </div>-->
+
+    <!--<section>
+        가족실<br>
+
+        <p>가족실</p>
+        <div>
+            <p>
+             가족실
+            </p>
+        </div>
+    </section>
+
+    <h1>가족실</h1>
+    <p>형제 구성원</p>
+    
+    <div>
+        <h1>가족실</h1>
+        <p>형제 구성원</p>
+        <p>자매 구성원</p>
+    </div>-->
+
+    <!--<ul>
+        <li><a>메인 메뉴</a></li>
+        <li><a href="#">메뉴 1</a></li>
+        <li><a href="#" target="_blank">메뉴 2</a></li>
+        <li><a href="#" class="button">메뉴 3</a></li>
+        <li><a href="#" title="us-english">메뉴 4</a></li>
+        <li><a href="#" title="english">메뉴 5</a></li>
+        <li><a href="#" title="japan">메뉴 6</a></li>
+        <li><a href="#" title="korean">메뉴 7</a></li>
+    </ul>-->
+
+    <!--<nav class="navi">
+        <ul>
+            <li><a href="#intro">이용 안내</a></li>
+            <li><a href="https://www.google.com/search?q=%EA%B0%80%EC%83%81%ED%81%B4%EB%9E%98%EC%8A%A4+focus&oq=%EA%B0%80%EC%83%81%ED%81%B4%EB%9E%98%EC%8A%A4+focus&aqs=chrome..69i57j33i160l3.5817j0j15&sourceid=chrome&ie=UTF-8">메뉴 1</a></li>
+            <li><a href="#signup">객실 형태</a></li>
+            <li><a href="#">메뉴 3</a></li>
+            <li><a href="#">메뉴 4</a></li>
+            <li><a href="#">메뉴 5</a></li>
+            <li><a href="#">메뉴 6</a></li>
+            <li><a href="#">메뉴 7</a></li>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="intro" class="border">
+        <h2>이용 안내</h2>
+        <p>알아서 잘 이용하고 가세요.</p>
+    </div>
+
+
+    <div id="signup"  class="border">
+        <div id="scale">
+    <fieldset>
+        <legend>개인 정보</legend>
+        <label for="name">이름 </label>
+        <input id="name" name="name" type="text"><br>
+        <label for="tel">연락처 </label>
+        <input id="tel" name="tel" type="tel">
+    </fieldset>
+
+    <fieldset>
+        <legend>객실 형태</legend>
+    <ul>
+        <li>
+            <input type="radio" name="room" id="basic">
+            <label for="basic">기본형 (최대 2인) </label>
+        </li>
+        <li>
+            <input type="radio" name="room" id="family">
+            <label for="family">가족형(최대 8인)</label>
+        </li>
+    </ul>
+    </fieldset>
+    </div>
+    </div>
+
+
+    <div class="contents, border">
+        <h2> 이용 안내 </h2>
+        <p> Excepteur do </p>
+        <p> Qui magna culpa</p>
+        <h2> 객실 소개 </h2>
+        <p> Irure incididunt </p>
+        <h2> 예약 방법 및 요금 </h2>
+        <p> Fugiat aliquip </p>
+    </div>
+
+    <div class="border">
+        
+        <h1>제품 목록</h1>
+        <div id="scaley">
+        <ul>
+            <li class="new">제품 A</li>
+            <li>제품 B</li>
+            <li>제품 C</li>
+            <li class="new">제품 D</li>
+
+        </ul>
+        </div>
+    </div>
+
+    <div class="border">
+        <h1>ㅇㅇ</h1>
+        <p>ㅇㅇㅇㅇ</p>
+        <div id="rotate1">
+        <img src="구슬.png">
+        </div>
+    </div>
+
+    <div class="border">
+        <div class="rotatex">
+            <img src="maple.jpg">
+        </div>
+    </div>
+
+    <div class="border" id="pers">
+        <div class="rotatex">
+            <img src="maple.jpg">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="border" id="pers">
+        <div id="rotatex">dd</div>
+    </div>
+    <br>
+    <div class="border"  id="pers">
+        <div id="rotatey">ddd</div>
+    </div>
+    <br>
+    <div class="border"  id="pers">
+        <div id="rotatez">dddd</div>
+    </div>
+    <br>
+    <div class="border"  id="pers">
+        <div id="rotatexyz">dddd</div>
+    </div>
+    <br>-->
+
+    <!--<div>
+        <h1>CSS 변형 함수 익히기</h1>
+    </div>-->
+
+    <!--<div class="big">
+        <div class="mid">
+            <div>
+                <div class="bg1"></div>
+            </div>
+            <div class="small">
+                <div class="bg2"></div>
+            </div>
+            <div class="small">
+                <div class="bg3">
+                    <p>제발 잘되라</p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!--<div class="bbox">
+        <div class="box"></div>
+    </div>
+
+    <div class="bbox1">
+        <div class="box1"></div>
+    </div>-->
+
+    <div class="gratest">
+    </div>
+
+
+
+
+</body>
+</html>
